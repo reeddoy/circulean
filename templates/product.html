@@ -1,0 +1,99 @@
+    {% extends 'base.html' %}
+{% load static %}
+{% block title %}{{category}}{% endblock title %}
+{% block content %}
+
+
+<section class="pt-3 border-bottom">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="text-uppercase fs-3">{{category}}</h1>
+        <nav class="breadcrumb">
+          <a class="breadcrumb-item" href="/">Home</a>
+          <span class="breadcrumb-item active" aria-current="page">{{category}}</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+    <main class="main-content">
+    <section class="shopify-element py-5">
+      <div class="container">
+        <div class="row py-2">
+          <div class="col-md-9">
+            <span>Showing {{ products.start_index }}–{{ products.end_index }} of {{ products.paginator.count }} results</span>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select border-0" aria-label="Default select example">
+              <option selected="">Default Sorting</option>
+              {% for category in category_u_list %}
+                <option value="{{category.slug}}">{{category.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="row">
+            {% for product in products %}
+          <div class="col-md-4 mb-3 product-item link-effect">
+            <div class="image-holder position-relative">
+              <a href="#">
+                <img src="{{ product.image.url }}" alt="categories" class="product-image img-fluid">
+              </a>
+              <a href="#" class="btn-icon btn-wishlist">
+                <svg width="24" height="24" viewbox="0 0 24 24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </a>
+              <div class="product-content">
+                <h5 class="product-title">{{ product.name }}</h5>
+                <a href="#" class="text-decoration-none" data-after="Best Quality & Best Price"><span>${{product.price}}</span></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <nav aria-label="Page navigation" class="d-flex justify-content-center mt-5">
+          <ul class="pagination">
+            {% if products.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ products.previous_page_number }}" aria-label="Previous">
+                <i class="icon icon-arrow-left"></i>
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#" aria-label="Previous">
+                <i class="icon icon-arrow-left"></i>
+              </a>
+            </li>
+            {% endif %}
+            
+            {% for num in products.paginator.page_range %}
+              {% if products.number == num %}
+                <li class="page-item active" aria-current="page"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+              {% elif num > products.number|add:'-3' and num < products.number|add:'3' %}
+                <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+              {% endif %}
+            {% endfor %}
+            
+            {% if products.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ products.next_page_number }}" aria-label="Next">
+                <i class="icon icon-arrow-right"></i>
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#" aria-label="Next">
+                <i class="icon icon-arrow-right"></i>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </main>
+  
+
+{% endblock %}

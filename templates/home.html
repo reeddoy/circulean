@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+
+  <section id="billboard" class="bg-light py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="section-title text-center mt-4" data-aos="fade-up">About Us</h1>
+        <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas ut dolorum consequuntur, adipisci
+            repellat! Eveniet commodi voluptatem voluptate, eum minima, in suscipit explicabo voluptatibus harum,
+            quibusdam ex repellat eaque!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="swiper main-swiper py-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="swiper-wrapper d-flex border-animation-left">
+            {% for category in category_u_list %}
+            <div class="swiper-slide" style="width: 20%; flex: 0 0 20%;">
+              <div class="banner-item image-zoom-effect">
+                <div class="image-holder">
+                  <a href="/product/{{category.slug}}/">
+                    <img src="{{category.image.url}}" alt="product" class="img-fluid">
+                  </a>
+                </div>
+                <div class="banner-content py-4">
+                  <h5 class="element-title text-uppercase">
+                    <a href="/product/{{category.slug}}/" class="item-anchor">{{category.name}}</a>
+                  </h5>
+                  {% if category.description %}
+                  <p>{{category.description}}</p>
+                  <div class="btn-left">
+                    <a href="/product/{{category.slug}}/" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="icon-arrow icon-arrow-left"><svg width="50" height="50" viewbox="0 0 24 24">
+            <use xlink:href="#angle-left"></use>
+          </svg></div>
+        <div class="icon-arrow icon-arrow-right"><svg width="50" height="50" viewbox="0 0 24 24">
+            <use xlink:href="#angle-right"></use>
+          </svg></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--features-->
+  {% include 'partials/features.html' %}
+
+
+  {% if website.new_arrival_feature_display %}
+  <!--new arrivals-->
+  <section id="new-arrival" class="new-arrival product-carousel py-5 position-relative overflow-hidden">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
+        <h4 class="text-uppercase">Our New Arrivals</h4>
+        <a href="/product/all/" class="btn-link">View All Products</a>
+      </div>
+      <div class="swiper product-swiper open-up" data-aos="zoom-out">
+        <div class="swiper-wrapper d-flex">
+          {% for product in products %}
+          <div class="swiper-slide">
+            <div class="product-item image-zoom-effect link-effect">
+              <div class="image-holder position-relative">
+                <a href="#">
+                  <img src="{{product.image.url}}" alt="categories" class="product-image img-fluid">
+                </a>
+
+                <div class="product-content">
+                  <h5 class="element-title text-uppercase fs-5 mt-3">
+                    <a href="#">{{product.name}}</a>
+                  </h5>
+                  <a href="#" class="text-decoration-none" data-after="Best Quality & Best Price"><span>${{product.price}}</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+  
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="icon-arrow icon-arrow-left"><svg width="50" height="50" viewbox="0 0 24 24">
+          <use xlink:href="#angle-left"></use>
+        </svg></div>
+      <div class="icon-arrow icon-arrow-right"><svg width="50" height="50" viewbox="0 0 24 24">
+          <use xlink:href="#angle-right"></use>
+        </svg></div>
+    </div>
+  </section>
+  {% endif %}
+
+  
+  <!--our supplier-->
+  <section class="logo-bar py-5 my-5">
+    <div class="container">
+      <div class="row">
+        <div class="text-center mb-4">
+          <h2 class="section-title text-uppercase">Our Suppliers</h2>
+          <p class="section-subtitle">Quality materials from trusted manufacturers</p>
+        </div>
+          <div class="logo-content d-flex flex-wrap justify-content-between align-items-center">
+          <div class="text-center mx-3 mb-3">
+              <h3 class="brand-name fw-bold" style="font-family: 'Cormorant Garamond', serif; letter-spacing: 1px; color: #e63946;">H&M</h3>
+          </div>
+          <div class="text-center mx-3 mb-3">
+            <h3 class="brand-name fw-bold" style="font-family: 'Cinzel', serif; text-transform: uppercase; color: #1d3557;">Aarong</h3>
+          </div>
+          <div class="text-center mx-3 mb-3">
+            <h3 class="brand-name fw-bold" style="font-family: 'Baskerville', serif; font-style: italic; color: #e63946;">Yellow</h3>
+          </div>
+          <div class="text-center mx-3 mb-3">
+            <h3 class="brand-name fw-bold" style="font-family: 'Didot', serif; letter-spacing: 2px; color: #1d3557;">Richman</h3>
+          </div>
+          <div class="text-center mx-3 mb-3">
+            <h3 class="brand-name fw-bold" style="font-family: 'Libre Baskerville', serif; color: #e63946; text-shadow: 1px 1px 2px rgba(0,0,0,0.05);">Sailor</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!--our partners-->
+  <section class="logo-bar py-5 my-5">
+    <div class="container">
+      <div class="row">
+        <div class="text-center mb-4">
+          <h2 class="section-title text-uppercase">Our Partners</h2>
+          <p class="section-subtitle">Trusted by leading brands worldwide</p>
+        </div>
+        <div class="logo-content d-flex flex-wrap justify-content-between">
+          <img src="{% static 'images/brand/brand1.png' %}" alt="logo" class="logo-image img-fluid" style="width: 250px;">
+          <img src="{% static 'images/brand/brand1.png' %}" alt="logo" class="logo-image img-fluid" style="width: 250px;">
+          <img src="{% static 'images/brand/brand1.png' %}" alt="logo" class="logo-image img-fluid" style="width: 250px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog py-5">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
+        <h4 class="text-uppercase">Read Blog Posts</h4>
+        <a href="blog-classic.html" class="btn-link">View All</a>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <article class="post-item">
+            <div class="post-image">
+              <a href="single-post.html">
+                <img src="{% static 'images/post-image1.jpg' %}" alt="image" class="post-grid-image img-fluid">
+              </a>
+            </div>
+            <div class="post-content d-flex flex-wrap gap-2 my-3">
+              <div class="post-meta text-uppercase fs-6 text-secondary">
+                <span class="post-category">Fashion /</span>
+                <span class="meta-day"> jul 11, 2022</span>
+              </div>
+              <h5 class="post-title text-uppercase">
+                <a href="single-post.html">How to look outstanding in pastel</a>
+              </h5>
+              <p>Dignissim lacus,turpis ut suspendisse vel tellus.Turpis purus,gravida orci,fringilla...</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="post-item">
+            <div class="post-image">
+              <a href="single-post.html">
+                <img src="{% static 'images/post-image2.jpg' %}" alt="image" class="post-grid-image img-fluid">
+              </a>
+            </div>
+            <div class="post-content d-flex flex-wrap gap-2 my-3">
+              <div class="post-meta text-uppercase fs-6 text-secondary">
+                <span class="post-category">Fashion /</span>
+                <span class="meta-day"> jul 11, 2022</span>
+              </div>
+              <h5 class="post-title text-uppercase">
+                <a href="single-post.html">Top 10 fashion trend for summer</a>
+              </h5>
+              <p>Turpis purus, gravida orci, fringilla dignissim lacus, turpis ut suspendisse vel tellus...</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="post-item">
+            <div class="post-image">
+              <a href="single-post.html">
+                <img src="{% static 'images/post-image3.jpg' %}" alt="image" class="post-grid-image img-fluid">
+              </a>
+            </div>
+            <div class="post-content d-flex flex-wrap gap-2 my-3">
+              <div class="post-meta text-uppercase fs-6 text-secondary">
+                <span class="post-category">Fashion /</span>
+                <span class="meta-day"> jul 11, 2022</span>
+              </div>
+              <h5 class="post-title text-uppercase">
+                <a href="single-post.html">Crazy fashion with unique moment</a>
+              </h5>
+              <p>Turpis purus, gravida orci, fringilla dignissim lacus, turpis ut suspendisse vel tellus...</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  {% endblock %}
