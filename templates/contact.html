@@ -27,22 +27,21 @@
               <div class="content-box">
                 <h5 class="element-title text-uppercase">Head Office</h5>
                 <div class="contact-address">
-                  <p>730 Glenstone Ave 65802, Springfield, US</p>
+                  <p>{{ headoffice.address }}</p>
                 </div>
                 <div class="contact-number">
                   <p>
-                    <a href="#">+123 987 321</a>
-                    <a href="#">+123 123 654</a>
+                    <a href="#">{{ headoffice.phone }}</a>
                   </p>
                 </div>
                 <div class="email-address">
                   <p>
-                    <a href="#">kaira@test.com</a>
+                    <a href="#">{{ headoffice.email }}</a>
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
               <div class="content-box">
                 <h5 class="element-title text-uppercase">Branch Office</h5>
                 <div class="contact-address">
@@ -60,7 +59,7 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-md-6">
               <div class="content-box">
                 <h5 class="element-title text-uppercase">Social info</h5>
@@ -124,69 +123,34 @@
     </div>
   </section>
 
+
+  {% if office_info %}
   <section class="contact-list py-5">
     <div class="container">
       <div class="row">
+        {% for office in office_info %}
         <div class="col-md-4">
           <div class="content-box">
-            <h5 class="element-title text-uppercase">USA</h5>
+            <h5 class="element-title text-uppercase">{{ office.name }}</h5>
             <div class="contact-address">
-              <p>730 Glenstone Ave 65802, Springfield, US</p>
+              <p>{{ office.address }}</p>
             </div>
             <div class="contact-number">
               <p>
-                <a href="#">+123 987 321</a>
-                <a href="#">+123 123 654</a>
+                <a href="#">{{ office.phone }}</a>
               </p>
             </div>
             <div class="email-address">
               <p>
-                <a href="#">kaira@test.com</a>
+                <a href="#">{{ office.email }}</a>
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="content-box">
-            <h5 class="element-title text-uppercase">France</h5>
-            <div class="contact-address">
-              <p>13 Rue Montmartre 75001, Paris, France</p>
-            </div>
-            <div class="contact-number">
-              <p>
-                <a href="#">+123 987 321</a>
-                <a href="#">+123 123 654</a>
-              </p>
-            </div>
-            <div class="email-address">
-              <p>
-                <a href="#">kaira@test.com</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="content-box">
-            <h5 class="element-title text-uppercase">Office</h5>
-            <div class="contact-address">
-              <p>18 Chapel Brow PR25 3NE, Leyland, UK</p>
-            </div>
-            <div class="contact-number">
-              <p>
-                <a href="#">+123 987 321</a>
-                <a href="#">+123 123 654</a>
-              </p>
-            </div>
-            <div class="email-address">
-              <p>
-                <a href="#">kaira@test.com</a>
-              </p>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
-
+  {% endif %}
 
 {% endblock %}

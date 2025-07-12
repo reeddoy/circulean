@@ -19,7 +19,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_filter = ('created_at',)
     list_per_page = 50
     ordering = ('-created_at',)
-    
+    exclude = ('slug',)
     def image_preview(self, obj):
         if obj.image:
             return format_html('<img src="{}" style="height: 30px;"/>', obj.image.url)
@@ -73,9 +73,21 @@ class WebsiteSettingAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return False  # disables "Delete" option
 
+
+class OfficeInformationAdmin(admin.ModelAdmin):
+    list_display = ('name','phone', 'email', 'created_at')
+    search_fields = ('name', 'phone', 'email')
+    list_filter = ('created_at',)
+    list_per_page = 50
+    ordering = ('created_at',)
+    
+
+
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Newsletter, NewsletterAdmin)
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(Website_Setting, WebsiteSettingAdmin)
+admin.site.register(Office_information, OfficeInformationAdmin)

@@ -49,7 +49,10 @@ def contact(request):
         except:
             messages.error(request, 'Something went wrong.')
             return redirect(request.get_full_path())
-    return render(request, 'contact.html')
+        
+    headoffice = Office_information.objects.first()
+    office_info = Office_information.objects.all().exclude(id=headoffice.id)
+    return render(request, 'contact.html', {'headoffice': headoffice, 'office_info': office_info})
 
 
 def about(request):
