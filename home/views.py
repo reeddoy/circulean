@@ -12,8 +12,8 @@ from django.conf import settings
 def home(request):
     website, created = Website_Setting.objects.get_or_create(id=1)
     products = Product.objects.order_by('-id')[:6]
-    return render(request, 'home.html', {'website': website, 'products': products})
-
+    blogs = Blog.objects.order_by('-id')[:3]
+    return render(request, 'home.html', {'website': website, 'products': products, 'blogs': blogs})
 
 
 
