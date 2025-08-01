@@ -11,6 +11,10 @@ urlpatterns = [
     path('blog-details/<int:id>/', views.blog_details, name='blog_details'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
+    path('internal-partners/', views.internal_partners, name='internal_partners'),
+    path('services/', views.services, name='services'),
+    path('merchandise-sourcing/', views.merchandise_sourcing, name='merchandise_sourcing'),
+    path('product-quality-audit/', views.product_quality_audit, name='product_quality_audit'),
     
     
     

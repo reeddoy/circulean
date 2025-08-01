@@ -118,3 +118,15 @@ def submit_newsletter(request):
         return redirect('/')
 
 
+
+def internal_partners(request):
+    return render(request, 'internal-partners.html')
+
+def services(request):
+    return render(request, 'services.html')
+
+def merchandise_sourcing(request):
+    return render(request, 'merchandise-sourcing.html')
+
+def product_quality_audit(request):
+    return render(request, 'product-quality-audit.html')

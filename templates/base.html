@@ -198,10 +198,18 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="/">Home</a>
+                  <a class="nav-link" href="/">Sustainability</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/about/">About</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownShop" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownShop">
+                    <li>
+                      <a href="/about/" class="dropdown-item item-anchor">About Us</a>
+                    </li>
+                    <li>
+                      <a href="" class="dropdown-item item-anchor">Internal Partners</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="dropdownShop" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
@@ -216,11 +224,22 @@
                     {% endfor %}
                   </ul>
                 </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownShop" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownShop">
+                    <li>
+                      <a href="/merchandise-sourcing/" class="dropdown-item item-anchor">Merchandise & Sourcing</a>
+                    </li>
+                    <li>
+                      <a href="/product-quality-audit/" class="dropdown-item item-anchor">Product Quality Audit</a>
+                    </li>
+                  </ul>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/contact/">Contact</a>
+                  <a class="nav-link" href="/contact/">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -259,7 +278,7 @@
 
 
 
-
+<!-- 
   <section class="newsletter bg-light" style="background: url({% static 'images/pattern-bg.png' %}) no-repeat;">
     <div class="container">
       <div class="row justify-content-center">
@@ -293,107 +312,55 @@
       </div>
       {% endfor %}
     </div>
-  </section>
-
-  <footer id="footer" class="mt-5">
+  </section> -->
+    <footer id="footer" class="mt-5">
     <div class="container">
-      <div class="row d-flex flex-wrap justify-content-between py-5">
-        <div class="col-md-3 col-sm-6">
+      <div class="row d-flex flex-wrap justify-content-between py-4">
+        <div class="col-md-5 col-sm-6">
           <div class="footer-menu footer-menu-001">
-            <div class="footer-intro mb-4">
+            <div class="footer-intro mb-3">
               <a href="/">
                 <img src="{% static 'logo/logo.png' %}" alt="logo" style='width:150px; height:50px;'>
               </a>
             </div>
-            <p>Gravida massa volutpat aenean odio. Amet, turpis erat nullam fringilla elementum diam in. Nisi, purus
-              vitae, ultrices nunc. Sit ac sit suscipit hendrerit.</p>
+            <p class="small">We provide end-to-end apparel sourcing and supply chain solutions, from fabric procurement to garment delivery. Our services ensure quality, compliance, and cost-effective fashion for global brands and retailers.</p>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="footer-menu footer-menu-002">
-            <h5 class="widget-title text-uppercase mb-4">Quick Links</h5>
-            <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">
-              <li class="menu-item">
-                <a href="/" class="item-anchor">Home</a>
-              </li>
-              <li class="menu-item">
-                <a href="/about/" class="item-anchor">About</a>
-              </li>
-              <li class="menu-item">
-                <a href="/product/all/" class="item-anchor">Product</a>
-              </li>
-              <li class="menu-item">
-                <a href="/blog/" class="item-anchor">Blog</a>
-              </li>
-              <li class="menu-item">
-                <a href="/contact/" class="item-anchor">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <div class="footer-menu footer-menu-004 border-animation-left">
-            <h5 class="widget-title text-uppercase mb-4">Contact Us</h5>
-            <p>Do you have any questions or suggestions? <a href="mailto:info@circulean.co.uk" class="item-anchor">info@circulean.co.uk</a></p>
-            <p>Do you need support? Give us a call. <a href="tel:+43720115278" class="item-anchor">+43 720 115 278</a>
-            </p>
+            <h5 class="widget-title text-uppercase mb-3">Contact Us</h5>
+            <p class="small">Questions? <a href="mailto:info@circulean.co.uk" class="item-anchor">info@circulean.co.uk</a></p>
+            <p class="small">Need support? <a href="tel:+43720115278" class="item-anchor">+43 720 115 278</a></p>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-12 text-center mb-4 mt-0 pt-0">
+        <div class="col-12 text-center mb-3">
           <div class="social-links">
-            <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-3">
-              <li>
-                <a href="#" class="text-secondary">
-                  <svg width="24" height="24" viewbox="0 0 24 24">
-                    <use xlink:href="#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-secondary">
-                  <svg width="24" height="24" viewbox="0 0 24 24">
-                    <use xlink:href="#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-secondary">
-                  <svg width="24" height="24" viewbox="0 0 24 24">
-                    <use xlink:href="#youtube"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-secondary">
-                  <svg width="24" height="24" viewbox="0 0 24 24">
-                    <use xlink:href="#pinterest"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-secondary">
-                  <svg width="24" height="24" viewbox="0 0 24 24">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </a>
-              </li>
+            <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-2">
+              <li><a href="#" class="text-secondary"><svg width="24" height="24" viewbox="0 0 24 24"><use xlink:href="#facebook"></use></svg></a></li>
+              <li><a href="#" class="text-secondary"><svg width="24" height="24" viewbox="0 0 24 24"><use xlink:href="#twitter"></use></svg></a></li>
+              <li><a href="#" class="text-secondary"><svg width="24" height="24" viewbox="0 0 24 24"><use xlink:href="#youtube"></use></svg></a></li>
+              <li><a href="#" class="text-secondary"><svg width="24" height="24" viewbox="0 0 24 24"><use xlink:href="#pinterest"></use></svg></a></li>
+              <li><a href="#" class="text-secondary"><svg width="24" height="24" viewbox="0 0 24 24"><use xlink:href="#instagram"></use></svg></a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="border-top py-4">
+    <div class="border-top py-3">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <p>© Copyright {% now 'Y' %} Circulean. All rights reserved. Developed by <a href="https://coderxen.com" target="_blank">CoderXen</a></p>
+            <p class="small mb-0">© Copyright {% now 'Y' %} Circulean. All rights reserved. Developed by <a href="https://coderxen.com" target="_blank">CoderXen</a></p>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  
+  
+  
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/plugins.js' %}"></script>
   <script src="{% static 'js/SmoothScroll.js' %}"></script>
