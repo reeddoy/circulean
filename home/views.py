@@ -50,9 +50,8 @@ def contact(request):
             messages.error(request, 'Something went wrong.')
             return redirect(request.get_full_path())
         
-    headoffice = Office_information.objects.first()
-    office_info = Office_information.objects.all().exclude(id=headoffice.id)
-    return render(request, 'contact.html', {'headoffice': headoffice, 'office_info': office_info})
+    
+    return render(request, 'contact.html')
 
 
 def about(request):
@@ -85,7 +84,7 @@ def product(request, slug):
         else:
             category = Category.objects.get(slug=slug)
             products = Product.objects.filter(category=category).order_by('-id')
-            category_name = category.name
+            
         
         # Add pagination
         paginator = Paginator(products, 9)  # Show 9 products per page
@@ -94,7 +93,7 @@ def product(request, slug):
         
         return render(request, 'product.html', {
             'products': page_obj,
-            'category': category_name
+            'category': category
         })
     except:
         messages.error(request, 'Category not found.')

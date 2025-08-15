@@ -21,23 +21,24 @@
       <div class="row">
         <div class="contact-info col-md-6">
           <h2 class="fs-3 text-uppercase">Contact information</h2>
-          <p>Tortor dignissim convallis aenean et tortor at risus viverra adipiscing.</p>
+          <p>Feel free to reach out to us with any questions or inquiries.</p>
           <div class="page-content">
             <div class="col-md-6">
               <div class="content-box">
                 <h5 class="element-title text-uppercase">Head Office</h5>
                 <div class="contact-address">
-                  <p>{{ headoffice.address }}</p>
-                </div>
-                <div class="contact-number">
-                  <p>
-                    <a href="#">{{ headoffice.phone }}</a>
-                  </p>
+                  <p>18 princes avenue, L82TB, Liverpool, UK</p>
                 </div>
                 <div class="email-address">
                   <p>
-                    <a href="#">{{ headoffice.email }}</a>
+                    <a href="mailto:info@circulean.co.uk">info@circulean.co.uk</a>
                   </p>
+                </div>
+              </div>
+              <div class="content-box">
+                <h5 class="element-title text-uppercase">Bangladesh Office</h5>
+                <div class="contact-address">
+                  <p>House: 49/4, Mattabar Road, Uttar badda, Dhaka-1212</p>
                 </div>
               </div>
             </div>
@@ -122,35 +123,5 @@
       </div>
     </div>
   </section>
-
-
-  {% if office_info %}
-  <section class="contact-list py-5">
-    <div class="container">
-      <div class="row">
-        {% for office in office_info %}
-        <div class="col-md-4">
-          <div class="content-box">
-            <h5 class="element-title text-uppercase">{{ office.name }}</h5>
-            <div class="contact-address">
-              <p>{{ office.address }}</p>
-            </div>
-            <div class="contact-number">
-              <p>
-                <a href="#">{{ office.phone }}</a>
-              </p>
-            </div>
-            <div class="email-address">
-              <p>
-                <a href="#">{{ office.email }}</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  {% endif %}
 
 {% endblock %}

@@ -3,143 +3,76 @@
 {% block title %}Product Quality Audit{% endblock title %}
 {% block content %}
 
-<section class="hero-section jarallax">
-  <img src="{% static 'images/banner-large-2.jpg' %}" class="jarallax-img">
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="d-flex flex-wrap flex-column justify-content-center align-items-center my-5 py-5 text-white">
-          <h1 class="page-title text-uppercase">Product Quality Audit</h1>
-          <nav class="breadcrumb text-white">
-            <a class="breadcrumb-item" href="/">Home</a>
-            <span class="breadcrumb-item active" aria-current="page">Product Quality Audit</span>
-          </nav>
+<section class="pt-3 border-bottom">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="text-uppercase fs-3">Product Quality Audit</h1>
+      <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="/">Home</a>
+        <span class="breadcrumb-item active" aria-current="page">Product Quality Audit</span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+
+<section class="intro-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="intro-content text-center">
+          <h2 class="section-title text-uppercase mb-4">Quality Assurance Excellence</h2>
+          <div class="intro-text mb-5">
+            <p class="lead">At cerculean, we conduct rigorous quality audits at every production stage to ensure your garments meet the highest standards. Our experienced team implements comprehensive AQL inspections, factory compliance checks and detailed product testing – from fabric durability to stitch quality.</p>
+          </div>
+          
+          <div class="services-overview mb-5">
+            <h3 class="h4 mb-4">We go beyond basic quality control by:</h3>
+            <div class="row text-start">
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-3">✓ Conducting in-line and pre-shipment inspections</li>
+                  <li class="mb-3">✓ Verifying against technical specifications and safety standards</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-3">✓ Providing transparent reporting with photographic evidence</li>
+                  <li class="mb-3">✓ Offering corrective action plans for any issues identified</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p class="experience-note">With our systematic approach, we minimise defects and ensure consistent product excellence while maintaining ethical production practices.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-{% comment %} <!--features-->
-{% include 'partials/features.html' %} {% endcomment %}
-
-<section id="product-quality-audit">
-  <div class="vertical-element">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-md-6">
-          <div class="image-holder">
-            <img src="{% static 'images/single-image1.jpg' %}" alt="product-quality-audit">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="section-element p-5">
-            <h2 class="element-title text-uppercase">Rigorous Quality Standards</h2>
-            <p>At cerculean, we conduct rigorous quality audits at every production stage to ensure your garments meet the highest standards. Our experienced team implements comprehensive AQL inspections, factory compliance checks and detailed product testing – from fabric durability to stitch quality.</p>
-          </div>
+<section class="image-gallery py-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
+          <img src="{% static 'images/quality-audit/image1.jpg' %}" alt="Quality Inspection" class="img-fluid w-100 h-100 object-fit-cover">
         </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="bg-light py-5">
-    <div class="container">
-      <div class="row text-center mb-5">
-        <div class="col-12">
-          <h2 class="section-title text-uppercase">Our Quality Approach</h2>
-          <p class="section-subtitle">Beyond basic quality control</p>
+      <div class="col-md-4">
+        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
+          <img src="{% static 'images/quality-audit/image2.jpg' %}" alt="Fabric Testing" class="img-fluid w-100 h-100 object-fit-cover">
         </div>
       </div>
-      
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
-              <div class="icon-box mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24">
-                  <use xlink:href="#search"></use>
-                </svg>
-              </div>
-              <h5 class="card-title">Comprehensive Inspections</h5>
-              <p class="card-text">Conducting in-line and pre-shipment inspections to catch issues early</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
-              <div class="icon-box mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24">
-                  <use xlink:href="#clipboard-check"></use>
-                </svg>
-              </div>
-              <h5 class="card-title">Specification Verification</h5>
-              <p class="card-text">Verifying against technical specifications and safety standards</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
-              <div class="icon-box mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24">
-                  <use xlink:href="#camera"></use>
-                </svg>
-              </div>
-              <h5 class="card-title">Transparent Reporting</h5>
-              <p class="card-text">Providing detailed reports with photographic evidence of findings</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
-              <div class="icon-box mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24">
-                  <use xlink:href="#tools"></use>
-                </svg>
-              </div>
-              <h5 class="card-title">Corrective Action</h5>
-              <p class="card-text">Offering corrective action plans for any issues identified</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="vertical-element py-5">
-    <div class="container">
-      <div class="row d-flex align-items-center justify-content-between">
-        <div class="col-md-6">
-          <div class="section-element p-5">
-            <h2 class="element-title text-uppercase">Our Systematic Approach</h2>
-            <p>With our systematic approach, we minimise defects and ensure consistent product excellence while maintaining ethical production practices. Our quality audit process is designed to identify potential issues before they become problems, saving time and resources while ensuring your products meet the highest standards.</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="image-holder text-right">
-            <img src="{% static 'images/single-image2.jpg' %}" alt="systematic-approach">
-          </div>
-        </div>
-      </div>
-    </div>  
-  </div>
-  
-  <div class="bg-light py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <h2 class="section-title text-uppercase mb-4">Ready to Elevate Your Product Quality?</h2>
-          <p class="mb-5">Contact us today to learn how our quality audit services can enhance your product excellence.</p>
-          <a href="/contact/" class="btn btn-dark btn-lg px-5 text-uppercase">Contact Us</a>
+      <div class="col-md-4">
+        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
+          <img src="{% static 'images/quality-audit/image3.jpg' %}" alt="Quality Report" class="img-fluid w-100 h-100 object-fit-cover">
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 {% endblock %}

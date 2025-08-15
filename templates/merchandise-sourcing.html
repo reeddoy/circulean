@@ -3,143 +3,79 @@
 {% block title %}Merchandise & Sourcing{% endblock title %}
 {% block content %}
 
-<section class="hero-section jarallax">
-  <img src="{% static 'images/banner-large-2.jpg' %}" class="jarallax-img">
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="d-flex flex-wrap flex-column justify-content-center align-items-center my-5 py-5 text-white">
-          <h1 class="page-title text-uppercase">Merchandise & Sourcing</h1>
-          <nav class="breadcrumb text-white">
-            <a class="breadcrumb-item" href="/">Home</a>
-            <span class="breadcrumb-item active" aria-current="page">Merchandise & Sourcing</span>
-          </nav>
+<section class="pt-3 border-bottom">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="text-uppercase fs-3">Merchandise & Sourcing</h1>
+      <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="/">Home</a>
+        <span class="breadcrumb-item active" aria-current="page">Merchandise & Sourcing</span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="intro-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="intro-content text-center">
+          <h2 class="section-title text-uppercase mb-4">Apparel Sourcing Excellence</h2>
+          <div class="intro-text mb-5">
+            <p class="lead">At cerculean, we provide end-to-end apparel sourcing solutions, combining ethical manufacturing with commercial expertise. As a trusted partner for UK and European brands, we specialise in sustainable production of denim, jerseywear, activewear and woven garments – from fabric sourcing to final delivery.</p>
+          </div>
+          
+          <div class="services-overview mb-5">
+            <h3 class="h4 mb-4">We offer:</h3>
+            <div class="row text-start">
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-3">✓ Responsible sourcing from certified mills and factories</li>
+                  <li class="mb-3">✓ Full supply chain management including QC and compliance</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="mb-3">✓ Material expertise in organic, recycled and innovative fabrics</li>
+                  <li class="mb-3">✓ Technical support from design to production</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p class="experience-note">With over 20 years' experience, we help brands navigate global supply chains while maintaining quality, sustainability and cost efficiency.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-{% comment %} <!--features-->
-{% include 'partials/features.html' %} {% endcomment %}
-
-<section id="merchandise-sourcing">
-  <div class="vertical-element">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-md-6">
-          <div class="image-holder">
-            <img src="{% static 'images/single-image1.jpg' %}" alt="merchandise-sourcing">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="section-element p-5">
-            <h2 class="element-title text-uppercase">End-to-End Apparel Solutions</h2>
-            <p>At cerculean, we provide end-to-end apparel sourcing solutions, combining ethical manufacturing with commercial expertise. As a trusted partner for UK and European brands, we specialise in sustainable production of denim, jerseywear, activewear and woven garments – from fabric sourcing to final delivery.</p>
-          </div>
+<section class="image-gallery py-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
+          <img src="{% static 'images/merchandise/image1.jpg' %}" alt="Image 1" class="img-fluid w-100 h-100 object-fit-cover">
         </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="bg-light py-5">
-    <div class="container">
-      <div class="row text-center mb-5">
-        <div class="col-12">
-          <h2 class="section-title text-uppercase">Our Services</h2>
-          <p class="section-subtitle">Comprehensive sourcing solutions for your brand</p>
+      <div class="col-md-4">
+        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
+          <img src="{% static 'images/merchandise/image2.jpg' %}" alt="Image 2" class="img-fluid w-100 h-100 object-fit-cover">
         </div>
       </div>
-      
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
-              <div class="icon-box mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24">
-                  <use xlink:href="#check-circle"></use>
-                </svg>
-              </div>
-              <h5 class="card-title">Responsible Sourcing</h5>
-              <p class="card-text">From certified mills and factories ensuring ethical production standards</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
-              <div class="icon-box mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24">
-                  <use xlink:href="#chart-line"></use>
-                </svg>
-              </div>
-              <h5 class="card-title">Supply Chain Management</h5>
-              <p class="card-text">Complete oversight including quality control and compliance</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
-              <div class="icon-box mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24">
-                  <use xlink:href="#leaf"></use>
-                </svg>
-              </div>
-              <h5 class="card-title">Material Expertise</h5>
-              <p class="card-text">Specializing in organic, recycled and innovative sustainable fabrics</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body text-center p-4">
-              <div class="icon-box mb-3">
-                <svg width="50" height="50" viewBox="0 0 24 24">
-                  <use xlink:href="#tools"></use>
-                </svg>
-              </div>
-              <h5 class="card-title">Technical Support</h5>
-              <p class="card-text">Comprehensive assistance from design concept to final production</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="vertical-element py-5">
-    <div class="container">
-      <div class="row d-flex align-items-center justify-content-between">
-        <div class="col-md-6">
-          <div class="section-element p-5">
-            <h2 class="element-title text-uppercase">Our Expertise</h2>
-            <p>With over 20 years' experience, we help brands navigate global supply chains while maintaining quality, sustainability and cost efficiency. Our team of experts understands the complexities of international manufacturing and can guide you through every step of the process.</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="image-holder text-right">
-            <img src="{% static 'images/single-image2.jpg' %}" alt="our-expertise">
-          </div>
-        </div>
-      </div>
-    </div>  
-  </div>
-  
-  <div class="bg-light py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <h2 class="section-title text-uppercase mb-4">Ready to Transform Your Supply Chain?</h2>
-          <p class="mb-5">Contact us today to discuss how our merchandise and sourcing solutions can benefit your brand.</p>
-          <a href="/contact/" class="btn btn-dark btn-lg px-5 text-uppercase">Contact Us</a>
+      <div class="col-md-4">
+        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
+          <img src="{% static 'images/merchandise/image3.jpg' %}" alt="Image 3" class="img-fluid w-100 h-100 object-fit-cover">
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
+
 
 {% endblock %}

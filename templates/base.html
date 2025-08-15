@@ -198,25 +198,11 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="/">Sustainability</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownShop" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownShop">
-                    <li>
-                      <a href="/about/" class="dropdown-item item-anchor">About Us</a>
-                    </li>
-                    <li>
-                      <a href="" class="dropdown-item item-anchor">Internal Partners</a>
-                    </li>
-                  </ul>
+                  <a class="nav-link" href="/">About Us</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="dropdownShop" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
                   <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownShop">
-                    <li>
-                      <a href="/product/all/" class="dropdown-item item-anchor">All</a>
-                    </li>
                     {% for category in category_u_list %}
                     <li>
                       <a href="/product/{{category.slug}}/" class="dropdown-item item-anchor">{{category.name}}</a>
@@ -235,6 +221,9 @@
                     </li>
                   </ul>
                 </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="/">Sustainability</a>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="/blog/">Blog</a>
                 </li>
@@ -313,7 +302,13 @@
       {% endfor %}
     </div>
   </section> -->
-    <footer id="footer" class="mt-5">
+  
+  
+  
+  
+  
+  
+  <footer id="footer" class="mt-5">
     <div class="container">
       <div class="row d-flex flex-wrap justify-content-between py-4">
         <div class="col-md-5 col-sm-6">
@@ -330,7 +325,14 @@
           <div class="footer-menu footer-menu-004 border-animation-left">
             <h5 class="widget-title text-uppercase mb-3">Contact Us</h5>
             <p class="small">Questions? <a href="mailto:info@circulean.co.uk" class="item-anchor">info@circulean.co.uk</a></p>
-            <p class="small">Need support? <a href="tel:+43720115278" class="item-anchor">+43 720 115 278</a></p>
+            <div class="affiliate-brand mt-3">
+              <h5 class="widget-title text-uppercase mb-2">Affiliate Brand</h5>
+              <div class="affiliate-logo">
+                <a href="#" target="_blank">
+                  <img src="{% static 'images/brand/brand1.png' %}" alt="Affiliate Brand" class="img-fluid" style="max-width: 120px;">
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

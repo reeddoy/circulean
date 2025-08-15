@@ -3,51 +3,54 @@
 {% block title %}Home{% endblock title %}
 {% block content %}
 
-  <section id="billboard" class="bg-light py-5">
-    <div class="container">
+  <section id="banner" class="py-5 position-relative" style="min-height: 500px;">
+    <div class="banner-slider">
+      <div class="banner-slide active" style="background-image: url('{% static 'images/banner/banner1.jpg' %}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+      <div class="banner-slide" style="background-image: url('{% static 'images/banner/banner2.jpg' %}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+      {% comment %} <div class="banner-slide" style="background-image: url('{% static 'images/banner/banner3.jpg' %}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+      <div class="banner-slide" style="background-image: url('{% static 'images/banner/banner4.jpg' %}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+    </div> {% endcomment %}
+    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+    <div class="container position-relative d-flex align-items-center justify-content-center h-100">
       <div class="row justify-content-center">
-        <h1 class="section-title text-center mt-4" data-aos="fade-up">About Us</h1>
-        <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
-          <p>We specialise in end-to-end apparel sourcing and supply chain solutions, offering tailored services from fabric procurement to finished garment delivery. Our expertise includes trend forecasting, supplier negotiation, quality control, and ethical compliance to ensure seamless production. We partner with brands and retailers to deliver cost-effective, sustainable, and high-quality fashion apparel across global markets.</p>
+        <div class="col-md-8 text-center">
+          <h1 class="section-title text-center text-white mb-4" data-aos="fade-up">About Us</h1>
+          <p class="text-white" data-aos="fade-up" data-aos-delay="300">We specialise in end-to-end apparel sourcing and supply chain solutions, offering tailored services from fabric procurement to finished garment delivery. Our expertise includes trend forecasting, supplier negotiation, quality control, and ethical compliance to ensure seamless production. We partner with brands and retailers to deliver cost-effective, sustainable, and high-quality fashion apparel across global markets.</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="swiper main-swiper py-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="swiper-wrapper d-flex border-animation-left">
-            {% for category in category_u_list %}
-            <div class="swiper-slide" style="width: 20%; flex: 0 0 20%;">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="/product/{{category.slug}}/">
-                    <img src="{{category.image.url}}" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="/product/{{category.slug}}/" class="item-anchor">{{category.name}}</a>
-                  </h5>
-                  {% if category.description %}
-                  <p>{{category.description}}</p>
-                  <div class="btn-left">
-                    <a href="/product/{{category.slug}}/" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>
-                  </div>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="icon-arrow icon-arrow-left"><svg width="50" height="50" viewbox="0 0 24 24">
-            <use xlink:href="#angle-left"></use>
-          </svg></div>
-        <div class="icon-arrow icon-arrow-right"><svg width="50" height="50" viewbox="0 0 24 24">
-            <use xlink:href="#angle-right"></use>
-          </svg></div>
       </div>
     </div>
   </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.banner-slide');
+      let currentSlide = 0;
+      
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+      }
+      
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      
+      // Initial setup
+      showSlide(0);
+      
+      // Change slide every 4 seconds
+      setInterval(nextSlide, 4000);
+    });
+  </script>
+  <style>
+    .banner-slide {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .banner-slide.active {
+      opacity: 1;
+    }
+  </style>
 
 
   <!--features-->
@@ -129,7 +132,7 @@
 
 
     <!--Affiliated Brand-->
-  <section class="logo-bar py-5 my-5">
+  {% comment %} <section class="logo-bar py-5 my-5">
     <div class="container">
       <div class="row">
         <div class="text-center mb-4">
@@ -143,7 +146,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
 
   <section class="blog py-5">
     <div class="container">
@@ -155,9 +158,9 @@
         {% for blog in blogs %}
         <div class="col-md-4">
           <article class="post-item">
-            <div class="post-image" style="height: 200px;">
+            <div class="post-image" style="height: 300px; overflow: hidden;">
               <a href="/blog-details/{{blog.id}}/">
-                <img src="{{blog.image.url}}" alt="image" class="post-grid-image img-fluid">
+                <img src="{{blog.image.url}}" alt="image" class="post-grid-image img-fluid w-100 h-100" style="object-fit: cover;">
               </a>
             </div>
             <div class="post-content d-flex flex-wrap gap-2 my-3">

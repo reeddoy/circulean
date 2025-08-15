@@ -74,30 +74,8 @@ class WebsiteSettingAdmin(admin.ModelAdmin):
         return False  # disables "Delete" option
 
 
-class OfficeInformationAdmin(admin.ModelAdmin):
-    list_display = ('name','phone', 'email', 'created_at')
-    search_fields = ('name', 'phone', 'email')
-    list_filter = ('created_at',)
-    list_per_page = 50
-    ordering = ('created_at',)
     
 
-class FooterImageAdmin(admin.ModelAdmin):
-    list_display = ('id','image_preview', 'created_at')
-    ordering = ('created_at',)
-    
-    def image_preview(self, obj):
-        if obj.image:
-            return format_html('<img src="{}" style="height: 30px;"/>', obj.image.url)
-        return "-"
-    image_preview.short_description = 'Image Preview'
-    image_preview.allow_tags = True
-    
-    def has_delete_permission(self, request, obj=None):
-        return False
-    
-    def has_add_permission(self, request):
-        return False 
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
@@ -105,5 +83,3 @@ admin.site.register(Contact, ContactAdmin)
 admin.site.register(Newsletter, NewsletterAdmin)
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(Website_Setting, WebsiteSettingAdmin)
-admin.site.register(Office_information, OfficeInformationAdmin)
-admin.site.register(Footer_Image, FooterImageAdmin)

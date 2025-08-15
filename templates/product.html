@@ -10,7 +10,7 @@
         <h1 class="text-uppercase fs-3">{{category}}</h1>
         <nav class="breadcrumb">
           <a class="breadcrumb-item" href="/">Home</a>
-          <span class="breadcrumb-item active" aria-current="page">{{category}}</span>
+          <span class="breadcrumb-item active" aria-current="page">{{category.name}}</span>
         </nav>
       </div>
     </div>
@@ -32,8 +32,21 @@
             </select>
           </div>
         </div>
+
+        <div class="row mb-4 mt-4">
+          <div class="col-12">
+            <div class="category-description text-center" style="width: 100%;">
+              <div class="py-3 px-4 border-bottom border-top mb-3">
+                {{ category.description|safe }}
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+
         <div class="row">
-            {% for product in products %}
+          {% for product in products %}
           <div class="col-md-4 mb-3 product-item link-effect">
             <div class="image-holder position-relative">
               <a href="#">
@@ -44,10 +57,10 @@
                   <use xlink:href="#heart"></use>
                 </svg>
               </a>
-              <div class="product-content">
+              <!-- <div class="product-content">
                 <h5 class="product-title">{{ product.name }}</h5>
-                <a href="#" class="text-decoration-none" data-after="Best Quality & Best Price"><span>${{product.price}}</span></a>
-              </div>
+                <a href="#" class="text-decoration-none" data-after="Best Quality & Best Price"><span>${{product.price}}</span></a> 
+              </div> -->
             </div>
           </div>
           {% endfor %}

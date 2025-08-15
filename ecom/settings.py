@@ -70,7 +70,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'home.context_processors.all_u_categories',
-                'home.context_processors.footer_images',
             ],
         },
     },

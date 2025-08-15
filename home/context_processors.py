@@ -1,4 +1,4 @@
-from .models import Category, Footer_Image
+from .models import Category
 
 
 def all_u_categories(request):
@@ -9,10 +9,6 @@ def all_u_categories(request):
 
 
 
-def footer_images(request):
-    images = Footer_Image.objects.all()
-    return {
-        'footer_image_list': images
-    }
+
 
 
