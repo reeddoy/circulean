@@ -9,6 +9,7 @@ class Category(models.Model):
     slug = models.SlugField(max_length=100, blank=True, null=True)
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='category/', blank=True, null=True)
+    sl = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def save(self, *args, **kwargs):
@@ -48,6 +49,7 @@ class Contact(models.Model):
     
 class Blog(models.Model):
     title = models.CharField(max_length=100, blank=True, null=True)
+    category = models.CharField(max_length=100, blank=True, null=True)
     description = CKEditor5Field('Text', config_name='extends', blank=True, null=True)
     image = models.ImageField(upload_to='blog/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)

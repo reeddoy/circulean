@@ -3,125 +3,360 @@
 {% block title %}{{blog.title}}{% endblock title %}
 {% block content %}
 
-  
-<section class="hero-section mt-5 py-5">
-    <div class="hero-content">
-      <div class="container">
-        <div class="row text-center">
-          <div class="post-meta text-uppercase my-3">
-            <span class="post-category">Fashion</span> / <span class="meta-date">{{blog.created_at|date:"d M, Y"}}</span>
-          </div>
-          <h1 class="post-title text-uppercase">
-            <a href="#">{{blog.title}}</a>
-          </h1>
-          <nav class="breadcrumb justify-content-center">
-            <a class="breadcrumb-item" href="/">Home</a>
-            <a class="breadcrumb-item" href="/blog/">Blog</a>
-            <span class="breadcrumb-item active" aria-current="page">Blog Details</span>
-          </nav>
+<!-- Enhanced Hero Section -->
+<section class="hero-section py-5 position-relative" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 400px;">
+  <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);"></div>
+  <div class="container position-relative d-flex align-items-center justify-content-center h-100">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <div class="section-badge mb-3" data-aos="fade-up">
+          <span class="badge bg-light text-primary px-3 py-2 rounded-pill">Blog Post</span>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <div class="post-wrap py-5 no-padding-bottom">
-    <div class="container">
-      <div class="row g-5">
-        <main class="post-grid col-md-8 offset-md-2">
-          <div class="row">
-            <article class="post-item">
-              <div class="hero-image">
-                <img src="{{blog.image.url}}" alt="single-post" class="img-fluid">
-              </div>
-              <div class="post-content py-5">
-                <div class="post-description">
-                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur facilisis vivamus massa magna. Blandit mauris libero condimentum commodo morbi consectetur sociis convallis sit. Magna diam amet justo sed vel dolor et volutpat integer. Iaculis sit sapien hac odio elementum egestas neque. Adipiscing purus euismod orci sem amet, et. Turpis erat ornare nisi laoreet est euismod.</p>
-                  <p>Sit suscipit tortor turpis sed fringilla lectus facilisis amet. Ipsum, amet dolor curabitur non aliquet orci urna volutpat. Id aliquam neque, ut vivamus sit imperdiet enim, lacus, vel. Morbi arcu amet, nulla fermentum vitae mattis arcu mi convallis. Urna in sollicitudin in vestibulum erat. Turpis faucibus augue ipsum, at aliquam. Cras sagittis tellus nunc integer vitae neque bibendum eget. Tempus malesuada et pellentesque maecenas. Sociis porttitor elit tincidunt tellus sit ornare. Purus ut quis sed venenatis eget ut ipsum, enim lacus. Praesent imperdiet vitae eu, eu tincidunt nunc integer sit.</p>
-                  <blockquote>“Sit suscipit tortor turpis sed fringilla lectus facilisis amet. Ipsum, amet dolor curabitur non aliquet orci urna volutpat. Id aliquam neque, ut vivamus sit imperdiet enim, lacus, vel.</blockquote>
-                  <h4>Consectetur Facilisis Vivamus</h4>
-                  <ul class="inner-list">
-                    <li>Blandit mauris libero condimentum commodo sociis convallis sit.</li>
-                    <li>Magna diam amet justo sed vel dolor et volutpat integer.</li>
-                    <li>Laculis sit sapien hac odio elementum egestas neque.</li>
-                  </ul>
-                  <p>Morbi arcu amet, nulla fermentum vitae mattis arcu mi convallis. Urna in sollicitudin in vestibulum erat. Turpis faucibus augue ipsum, at aliquam. Cras sagittis tellus nunc integer vitae neque bibendum eget. Tempus malesuada et pellentesque maecenas. Sociis porttitor elit tincidunt tellus sit ornare. Purus ut ipsum, enim lacus. Praesent imperdiet vitae eu, eu tincidunt nunc integer sit.</p>
-                  <p>Tortor diam dignissim amet, in interdum aliquet. Magnis dictum et eros purus fermentum, massa ullamcorper sit sollicitudin. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec, rutrum a diam lacus, nunc integer etiam. Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor. Porta ut diam lobortis eget leo, lectus. Nunc tempus feugiat massa laoreet ultrices diam magna quam. Congue auctor auctor luctus neque. Enim lorem ultrices diam donec. Sed id placerat consectetur faucibus.</p>
-                  <img src="images/single-image3.jpg" alt="post-image" class="align-left">
-                  <h4>Velit, praesent pharetra malesuada</h4>
-                  <p>Id pulvinar amet. Consequat potenti mollis massa iaculis et, dolor, eget lectus. Aliquam pellentesque molestie felis fames sed eget non euismod eget. Et eget ullamcorper urna, elit ac diam tellus viverra lacus.</p>
-                  <p>Tortor diam dignissim amet, in interdum aliquet. Magnis dictum et eros purus fermentum, massa ullamcorper sit sollicitudin. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec, rutrum a diam lacus, nunc integer etiam. Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor. Porta ut diam lobortis eget leo, lectus.</p>
-                  <p>Velit, praesent pharetra malesuada id pulvinar amet. Consequat potenti mollis massa iaculis et, dolor, eget lectus. Aliquam pellentesque molestie felis fames sed eget non euismod eget. Et eget ullamcorper urna, elit ac diam tellus viverra lacus.</p>
-                  <p>Tortor diam dignissim amet, in interdum aliquet. Magnis dictum et eros purus fermentum, massa ullamcorper sit sollicitudin. Nascetur libero elementum adipiscing mauris maecenas et magna. Etiam nec, rutrum a diam lacus, nunc integer etiam. Mattis pulvinar non viverra donec pellentesque. Odio mi consequat libero dolor. Porta ut diam lobortis eget leo, lectus.</p>
-                  <div class="post-bottom-link d-flex justify-content-between">
-                    <div class="block-tag">
-                      <ul class="list-unstyled d-flex">
-                        <li>
-                          <a href="#">Denim</a>
-                        </li>
-                        <li>
-                          <a href="#">Trending</a>
-                        </li>
-                        <li>
-                          <a href="#">Clothing</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="block-social-links d-flex align-items-baseline">
-                      <div class="element-title text-uppercase">Share:</div>
-                      <ul class="list-unstyled d-flex">
-                        <li>
-                          <a href="#">Facebook</a>
-                        </li>
-                        <li>
-                          <a href="#">Twitter</a>
-                        </li>
-                        <li>
-                          <a href="#">Pinterest</a>
-                        </li>
-                        <li>
-                          <a href="#">Youtube</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div> -->
-                  {{blog.description|safe}}
-                </div>
-              </div>
-            </article>
-          </div>
-        </main>
+        <div class="post-meta text-uppercase mb-3" data-aos="fade-up" data-aos-delay="200">
+          <span class="post-category text-white-75">{{blog.category}}</span>
+          <span class="text-white-50 mx-2">•</span>
+          <span class="meta-date text-white-75">{{blog.created_at|date:"d M, Y"}}</span>
+        </div>
+        <h1 class="post-title text-white display-4 fw-bold mb-4" data-aos="fade-up" data-aos-delay="400" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1.3;">{{blog.title}}</h1>
+        <nav class="breadcrumb justify-content-center mt-4" data-aos="fade-up" data-aos-delay="600">
+          <a class="breadcrumb-item text-white-50" href="/">Home</a>
+          <a class="breadcrumb-item text-white-50" href="/blog/">Blog</a>
+          <span class="breadcrumb-item active text-white" aria-current="page">Blog Details</span>
+        </nav>
       </div>
     </div>
   </div>
-  
-  <section class="related-post post-wrap py-4">
-    <div class="container">
-      <div class="section-header d-flex align-items-center justify-content-between">
-        <h2 class="section-title text-uppercase">Latest Posts</h2>
-      </div>
-      <div class="row">
-        {% for post in last_post %}
-        <div class="col-md-4">
-          <article class="post-item">
-            <div class="post-image">
-              <a href="/blog-details/{{post.id}}/"><img src="{{post.image.url}}" alt="image" class="post-grid-image img-fluid"></a>
+</section>
+
+<!-- Enhanced Blog Content Section -->
+<section class="blog-content py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <main class="col-lg-10">
+        <article class="post-item bg-white rounded-3 shadow-lg overflow-hidden" data-aos="fade-up">
+          <!-- Hero Image -->
+          <div class="hero-image position-relative" style="height: 400px; overflow: hidden;">
+            <img src="{{blog.image.url}}" alt="single-post" class="img-fluid w-100 h-100" style="object-fit: cover;">
+            <div class="image-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(45deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));"></div>
+            <div class="post-badge position-absolute top-0 start-0 m-4">
+              <span class="badge bg-primary px-3 py-2 rounded-pill">Featured</span>
             </div>
-            <div class="post-content">
-              <div class="post-meta text-uppercase">
-                <span class="post-category">Fashion /</span>
-                <span class="meta-day">{{post.created_at|date:"d M, Y"}}</span>
+          </div>
+          
+          <!-- Post Content -->
+          <div class="post-content p-5">
+            <div class="post-description" style="line-height: 1.8; color: #2c3e50;">
+              {{blog.description|safe}}
+            </div>
+            
+            <!-- Enhanced Post Footer -->
+            <div class="post-footer mt-5 pt-4 border-top">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="block-tag">
+                    <h6 class="text-uppercase fw-bold mb-3" style="color: #667eea;">Tags:</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                      <a href="#" class="badge bg-light text-primary px-3 py-2 rounded-pill text-decoration-none">Denim</a>
+                      <a href="#" class="badge bg-light text-primary px-3 py-2 rounded-pill text-decoration-none">Trending</a>
+                      <a href="#" class="badge bg-light text-primary px-3 py-2 rounded-pill text-decoration-none">Clothing</a>
+                      <a href="#" class="badge bg-light text-primary px-3 py-2 rounded-pill text-decoration-none">Fashion</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="block-social-links text-md-end">
+                    <h6 class="text-uppercase fw-bold mb-3" style="color: #667eea;">Share:</h6>
+                    <div class="d-flex justify-content-md-end gap-3">
+                      <a href="#" class="social-link" style="color: #3b5998; font-size: 1.5rem;">
+                        <i class="fab fa-facebook"></i>
+                      </a>
+                      <a href="#" class="social-link" style="color: #1da1f2; font-size: 1.5rem;">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="social-link" style="color: #e60023; font-size: 1.5rem;">
+                        <i class="fab fa-pinterest"></i>
+                      </a>
+                      <a href="#" class="social-link" style="color: #ff0000; font-size: 1.5rem;">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h5 class="post-title text-uppercase">
-                <a href="/blog-details/{{post.id}}/">{{post.title}}</a>
-              </h5>
-              <p>{{post.description|safe|slice:":100"}}...</p>
             </div>
-          </article>
+          </div>
+        </article>
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- Enhanced Related Posts Section -->
+<section class="related-posts py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <div class="section-badge mb-3">
+        <span class="badge bg-light text-primary px-3 py-2 rounded-pill">More Articles</span>
+      </div>
+      <h2 class="section-title text-white fw-bold mb-3">Latest Posts</h2>
+      <p class="text-white-75 lead">Discover more insights and stories from our blog</p>
+    </div>
+    
+    <div class="row g-4">
+      {% for post in last_post %}
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+        <article class="post-item bg-white rounded-3 shadow-sm overflow-hidden h-100" style="transition: transform 0.3s, box-shadow 0.3s;">
+          <div class="post-image position-relative" style="height: 200px; overflow: hidden;">
+            <a href="/blog-details/{{post.id}}/">
+              <img src="{{post.image.url}}" alt="image" class="img-fluid w-100 h-100" style="object-fit: cover; transition: transform 0.3s;">
+            </a>
+            <div class="post-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(102, 126, 234, 0.8); opacity: 0; transition: opacity 0.3s;">
+              <a href="/blog-details/{{post.id}}/" class="btn btn-light rounded-pill px-4">Read More</a>
+            </div>
+            <div class="post-badge position-absolute top-0 start-0 m-3">
+              <span class="badge bg-primary px-3 py-2 rounded-pill">Fashion</span>
+            </div>
+          </div>
+          <div class="post-content p-4">
+            <div class="post-meta text-uppercase fs-6 text-secondary mb-3">
+              <i class="fas fa-calendar-alt me-2"></i>
+              <span class="meta-date">{{post.created_at|date:"d M, Y"}}</span>
+            </div>
+            <h5 class="post-title text-uppercase fw-bold mb-3">
+              <a href="/blog-details/{{post.id}}/" style="color: #2c3e50; text-decoration: none;">{{post.title}}</a>
+            </h5>
+            <p class="text-muted" style="line-height: 1.6;">{{post.description|safe|slice:":120"}}...</p>
+            <div class="mt-3">
+              <a href="/blog-details/{{post.id}}/" class="btn btn-outline-primary btn-sm rounded-pill">Read Full Article</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <h2 class="fw-bold mb-4" style="color: #2c3e50;">Stay Updated with Our Latest Insights</h2>
+        <p class="lead mb-4" style="color: #5a6c7d;">Subscribe to our newsletter and never miss the latest trends, tips, and stories from the fashion industry.</p>
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="input-group">
+              <input type="email" class="form-control form-control-lg rounded-start-pill" placeholder="Enter your email address" aria-label="Email address">
+              <button class="btn btn-primary btn-lg rounded-end-pill px-4" type="button">Subscribe</button>
+            </div>
+            <small class="text-muted mt-2 d-block">We respect your privacy. Unsubscribe at any time.</small>
+          </div>
         </div>
-        {% endfor %}
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Enhanced Styles -->
+<style>
+  .section-badge {
+    display: inline-block;
+  }
   
+  .post-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
   
+  .post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+  }
+  
+  .post-item:hover .post-overlay {
+    opacity: 1 !important;
+  }
+  
+  .post-item:hover .post-image img {
+    transform: scale(1.1);
+  }
+  
+  .post-title a:hover {
+    color: #667eea !important;
+  }
+  
+  .social-link {
+    transition: all 0.3s;
+    display: inline-block;
+  }
+  
+  .social-link:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+  }
+  
+  .badge {
+    transition: all 0.3s;
+  }
+  
+  .badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .btn {
+    transition: all 0.3s;
+    font-weight: 600;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  
+  .btn-outline-primary {
+    border-color: #667eea;
+    color: #667eea;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #667eea;
+    border-color: #667eea;
+    color: white;
+  }
+  
+  .form-control {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+  }
+  
+  .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    border-color: #667eea;
+  }
+  
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255,255,255,0.5);
+  }
+  
+  .breadcrumb-item a:hover {
+    color: white !important;
+    text-decoration: none;
+  }
+  
+  .post-badge {
+    z-index: 2;
+  }
+  
+  .rounded-3 {
+    border-radius: 1rem !important;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  }
+  
+  /* Enhanced typography */
+  .post-description h1, .post-description h2, .post-description h3, 
+  .post-description h4, .post-description h5, .post-description h6 {
+    color: #2c3e50;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .post-description p {
+    margin-bottom: 1.5rem;
+    color: #5a6c7d;
+  }
+  
+  .post-description blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .post-description ul, .post-description ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .post-description li {
+    margin-bottom: 0.5rem;
+    color: #5a6c7d;
+  }
+  
+  .post-description img {
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Enhanced animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .post-item {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  /* Related posts section enhancements */
+  .related-posts {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .related-posts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.2;
+  }
+  
+  .related-posts .container {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
 {% endblock %}

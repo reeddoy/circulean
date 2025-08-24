@@ -3,76 +3,313 @@
 {% block title %}Product Quality Audit{% endblock title %}
 {% block content %}
 
-<section class="pt-3 border-bottom">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
-      <h1 class="text-uppercase fs-3">Product Quality Audit</h1>
-      <nav class="breadcrumb">
-        <a class="breadcrumb-item" href="/">Home</a>
-        <span class="breadcrumb-item active" aria-current="page">Product Quality Audit</span>
-      </nav>
+<!-- Enhanced Header Section -->
+<section class="hero-header py-5 position-relative" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 300px;">
+  <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);"></div>
+  <div class="container position-relative d-flex align-items-center justify-content-center h-100">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <div class="section-badge mb-3" data-aos="fade-up">
+          <span class="badge bg-light text-primary px-3 py-2 rounded-pill">Quality Assurance</span>
+        </div>
+        <h1 class="text-white display-4 fw-bold mb-4" data-aos="fade-up" data-aos-delay="200" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Product Quality Audit</h1>
+        <p class="text-white lead fs-5" data-aos="fade-up" data-aos-delay="400" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.3); line-height: 1.8;">Rigorous quality audits at every production stage to ensure your garments meet the highest standards</p>
+        <nav class="breadcrumb justify-content-center mt-4" data-aos="fade-up" data-aos-delay="600">
+          <a class="breadcrumb-item text-white-50" href="/">Home</a>
+          <span class="breadcrumb-item active text-white" aria-current="page">Product Quality Audit</span>
+        </nav>
+      </div>
     </div>
   </div>
 </section>
 
-
-<section class="intro-section py-5">
+<!-- Enhanced Main Content Section -->
+<section class="intro-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="intro-content text-center">
-          <h2 class="section-title text-uppercase mb-4">Quality Assurance Excellence</h2>
-          <div class="intro-text mb-5">
-            <p class="lead">At cerculean, we conduct rigorous quality audits at every production stage to ensure your garments meet the highest standards. Our experienced team implements comprehensive AQL inspections, factory compliance checks and detailed product testing – from fabric durability to stitch quality.</p>
+    <!-- First row: Left text, Right image -->
+    <div class="row align-items-center mb-5" data-aos="fade-right">
+      <div class="col-lg-6">
+        <div class="content-block p-4">
+          <div class="section-badge mb-3">
+            <span class="badge bg-primary px-3 py-2 rounded-pill">Quality Control</span>
           </div>
+          <h2 class="section-title text-uppercase mb-4 fw-bold" style="color: #2c3e50;">Product Quality Audit</h2>
+          <p class="lead mb-4" style="color: #34495e; line-height: 1.8;">At cerculean, we conduct rigorous quality audits at every production stage to ensure your garments meet the highest standards. Our experienced team implements comprehensive AQL inspections, factory compliance checks and detailed product testing – from fabric durability to stitch quality.</p>
           
-          <div class="services-overview mb-5">
-            <h3 class="h4 mb-4">We go beyond basic quality control by:</h3>
-            <div class="row text-start">
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li class="mb-3">✓ Conducting in-line and pre-shipment inspections</li>
-                  <li class="mb-3">✓ Verifying against technical specifications and safety standards</li>
-                </ul>
+          <div class="services-list mb-4">
+            <h3 class="h5 mb-3 fw-bold" style="color: #2c3e50;">We go beyond basic quality control by:</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="service-feature p-3 bg-white rounded-3 shadow-sm">
+                  <i class="fas fa-search text-primary mb-2"></i>
+                  <h6 class="mb-1 fw-bold">Conducting inspections</h6>
+                  <small class="text-muted">Thorough examination</small>
+                </div>
               </div>
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li class="mb-3">✓ Providing transparent reporting with photographic evidence</li>
-                  <li class="mb-3">✓ Offering corrective action plans for any issues identified</li>
-                </ul>
+              <div class="col-6">
+                <div class="service-feature p-3 bg-white rounded-3 shadow-sm">
+                  <i class="fas fa-shield-alt text-primary mb-2"></i>
+                  <h6 class="mb-1 fw-bold">Verifying safety standards</h6>
+                  <small class="text-muted">Compliance checks</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="service-feature p-3 bg-white rounded-3 shadow-sm">
+                  <i class="fas fa-file-alt text-primary mb-2"></i>
+                  <h6 class="mb-1 fw-bold">Providing transparent reporting</h6>
+                  <small class="text-muted">Detailed documentation</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="service-feature p-3 bg-white rounded-3 shadow-sm">
+                  <i class="fas fa-tools text-primary mb-2"></i>
+                  <h6 class="mb-1 fw-bold">Offering corrective action plans</h6>
+                  <small class="text-muted">Problem resolution</small>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="image-block position-relative">
+          <img src="{% static 'images/quality-audit/image1.jpg' %}" alt="Quality Inspection" class="img-fluid rounded-3 shadow-lg" style="transform: perspective(1000px) rotateY(-5deg);">
+          <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: linear-gradient(45deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));"></div>
+          <div class="floating-card position-absolute top-0 end-0 bg-white p-3 rounded-3 shadow-lg" style="transform: translate(20px, -20px);">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-award text-warning me-2"></i>
+              <div>
+                <h6 class="mb-0 fw-bold">AQL Standards</h6>
+                <small class="text-muted">Industry Best</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Right image, Left text -->
+    <div class="row align-items-center mb-5" data-aos="fade-left">
+      <div class="col-lg-6 order-lg-2">
+        <div class="content-block p-4">
+          <div class="section-badge mb-3">
+            <span class="badge bg-success px-3 py-2 rounded-pill">Systematic Approach</span>
+          </div>
+          <p class="mb-4" style="color: #5a6c7d; line-height: 1.7;">With our rigorous, systemised approach to manufacturing, we proactively minimise defects and maintain exceptional quality control at every stage. By implementing structured processes and continuous improvement methodologies, we ensure consistent product excellence across all collections while strictly upholding ethical production standards and responsible sourcing practices.</p>
+          <p style="color: #5a6c7d; line-height: 1.7;">Our meticulous quality assurance framework guarantees reliability without compromising on sustainability or social compliance.</p>
           
-          <p class="experience-note">With our systematic approach, we minimise defects and ensure consistent product excellence while maintaining ethical production practices.</p>
+          <div class="mt-4">
+            <div class="row text-center">
+              <div class="col-4">
+                <div class="stat-card bg-white p-3 rounded-3 shadow-sm">
+                  <i class="fas fa-clipboard-check text-success mb-2 fs-4"></i>
+                  <h4 class="fw-bold text-success mb-1">100%</h4>
+                  <small class="text-muted">Quality Checked</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-card bg-white p-3 rounded-3 shadow-sm">
+                  <i class="fas fa-eye text-primary mb-2 fs-4"></i>
+                  <h4 class="fw-bold text-primary mb-1">Multi-Stage</h4>
+                  <small class="text-muted">Inspection</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-card bg-white p-3 rounded-3 shadow-sm">
+                  <i class="fas fa-certificate text-warning mb-2 fs-4"></i>
+                  <h4 class="fw-bold text-warning mb-1">Certified</h4>
+                  <small class="text-muted">Standards</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="image-block position-relative">
+          <img src="{% static 'images/quality-audit/image2.jpg' %}" alt="Fabric Testing" class="img-fluid rounded-3 shadow-lg" style="transform: perspective(1000px) rotateY(5deg);">
+          <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: linear-gradient(45deg, rgba(40, 167, 69, 0.2), rgba(23, 162, 184, 0.2));"></div>
+          <div class="floating-card position-absolute bottom-0 start-0 bg-white p-3 rounded-3 shadow-lg" style="transform: translate(-20px, 20px);">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-microscope text-success me-2"></i>
+              <div>
+                <h6 class="mb-0 fw-bold">Lab Testing</h6>
+                <small class="text-muted">Advanced Analysis</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Left text, Right image -->
+    <div class="row align-items-center" data-aos="fade-right">
+      <div class="col-lg-6">
+        <div class="content-block p-4">
+          <div class="section-badge mb-3">
+            <span class="badge bg-warning px-3 py-2 rounded-pill">Quality Framework</span>
+          </div>
+          <h3 class="h4 mb-3 fw-bold" style="color: #2c3e50;">Comprehensive Quality Framework</h3>
+          <p class="mb-4" style="color: #5a6c7d; line-height: 1.7;">Our quality assurance process is built on industry best practices and years of experience. We don't just check for defects – we prevent them through proactive monitoring and continuous improvement.</p>
+          <p style="color: #5a6c7d; line-height: 1.7;">Every audit includes detailed documentation, photographic evidence, and actionable insights to help maintain the highest standards throughout your supply chain.</p>
+          
+          <div class="mt-4">
+            <div class="quality-features">
+              <div class="d-flex align-items-center mb-3 p-3 bg-white rounded-3 shadow-sm">
+                <i class="fas fa-camera text-primary me-3 fs-4"></i>
+                <div>
+                  <h6 class="mb-1 fw-bold">Photographic Evidence</h6>
+                  <small class="text-muted">Visual documentation of all inspections</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-3 p-3 bg-white rounded-3 shadow-sm">
+                <i class="fas fa-chart-line text-success me-3 fs-4"></i>
+                <div>
+                  <h6 class="mb-1 fw-bold">Continuous Improvement</h6>
+                  <small class="text-muted">Proactive defect prevention</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm">
+                <i class="fas fa-file-contract text-warning me-3 fs-4"></i>
+                <div>
+                  <h6 class="mb-1 fw-bold">Detailed Reports</h6>
+                  <small class="text-muted">Comprehensive audit documentation</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="image-block position-relative">
+          <img src="{% static 'images/quality-audit/image3.jpg' %}" alt="Quality Report" class="img-fluid rounded-3 shadow-lg" style="transform: perspective(1000px) rotateY(-5deg);">
+          <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: linear-gradient(45deg, rgba(255, 193, 7, 0.2), rgba(40, 167, 69, 0.2));"></div>
+          <div class="floating-card position-absolute top-50 start-50 translate-middle bg-white p-3 rounded-3 shadow-lg">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-check-double text-success me-2"></i>
+              <div>
+                <h6 class="mb-0 fw-bold">Verified</h6>
+                <small class="text-muted">Quality</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="image-gallery py-4">
+<!-- Call to Action Section -->
+<section class="cta-section py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
-          <img src="{% static 'images/quality-audit/image1.jpg' %}" alt="Quality Inspection" class="img-fluid w-100 h-100 object-fit-cover">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
-          <img src="{% static 'images/quality-audit/image2.jpg' %}" alt="Fabric Testing" class="img-fluid w-100 h-100 object-fit-cover">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
-          <img src="{% static 'images/quality-audit/image3.jpg' %}" alt="Quality Report" class="img-fluid w-100 h-100 object-fit-cover">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <h2 class="text-white fw-bold mb-4">Ready to Ensure Quality Excellence?</h2>
+        <p class="text-white-75 lead mb-4">Let's discuss how our comprehensive quality audit process can protect your brand and ensure the highest standards for your products.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/contact/" class="btn btn-light btn-lg px-4 py-3 rounded-pill shadow-sm fw-bold">Start Quality Audit</a>
+          <a href="/merchandise-sourcing/" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">Learn About Sourcing</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
+<!-- Enhanced Styles -->
+<style>
+  .section-badge {
+    display: inline-block;
+  }
+  
+  .service-feature {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .service-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+  }
+  
+  .stat-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .quality-features .d-flex {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .quality-features .d-flex:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .floating-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .floating-card:hover {
+    transform: translate(20px, -20px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+  }
+  
+  .image-block img {
+    transition: transform 0.3s;
+  }
+  
+  .image-block:hover img {
+    transform: perspective(1000px) rotateY(0deg) scale(1.05);
+  }
+  
+  .btn {
+    transition: all 0.3s;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175) !important;
+  }
+  
+  .rounded-3 {
+    border-radius: 0.75rem !important;
+  }
+  
+  .hero-header {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255,255,255,0.5);
+  }
+  
+  .breadcrumb-item a:hover {
+    color: white !important;
+    text-decoration: none;
+  }
+</style>
 
 {% endblock %}

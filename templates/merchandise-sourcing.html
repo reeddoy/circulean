@@ -3,79 +3,313 @@
 {% block title %}Merchandise & Sourcing{% endblock title %}
 {% block content %}
 
-<section class="pt-3 border-bottom">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
-      <h1 class="text-uppercase fs-3">Merchandise & Sourcing</h1>
-      <nav class="breadcrumb">
-        <a class="breadcrumb-item" href="/">Home</a>
-        <span class="breadcrumb-item active" aria-current="page">Merchandise & Sourcing</span>
-      </nav>
+<!-- Enhanced Header Section -->
+<section class="hero-header py-5 position-relative" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 300px;">
+  <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);"></div>
+  <div class="container position-relative d-flex align-items-center justify-content-center h-100">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <div class="section-badge mb-3" data-aos="fade-up">
+          <span class="badge bg-light text-primary px-3 py-2 rounded-pill">Our Services</span>
+        </div>
+        <h1 class="text-white display-4 fw-bold mb-4" data-aos="fade-up" data-aos-delay="200" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Merchandise & Sourcing</h1>
+        <p class="text-white lead fs-5" data-aos="fade-up" data-aos-delay="400" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.3); line-height: 1.8;">End-to-end apparel sourcing solutions with ethical manufacturing and commercial expertise</p>
+        <nav class="breadcrumb justify-content-center mt-4" data-aos="fade-up" data-aos-delay="600">
+          <a class="breadcrumb-item text-white-50" href="/">Home</a>
+          <span class="breadcrumb-item active text-white" aria-current="page">Merchandise & Sourcing</span>
+        </nav>
+      </div>
     </div>
   </div>
 </section>
 
-
-
-<section class="intro-section py-5">
+<!-- Enhanced Main Content Section -->
+<section class="intro-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="intro-content text-center">
-          <h2 class="section-title text-uppercase mb-4">Apparel Sourcing Excellence</h2>
-          <div class="intro-text mb-5">
-            <p class="lead">At cerculean, we provide end-to-end apparel sourcing solutions, combining ethical manufacturing with commercial expertise. As a trusted partner for UK and European brands, we specialise in sustainable production of denim, jerseywear, activewear and woven garments – from fabric sourcing to final delivery.</p>
+    <!-- First row: Left text, Right image -->
+    <div class="row align-items-center mb-5" data-aos="fade-right">
+      <div class="col-lg-6">
+        <div class="content-block p-4">
+          <div class="section-badge mb-3">
+            <span class="badge bg-primary px-3 py-2 rounded-pill">Core Services</span>
           </div>
+          <h2 class="section-title text-uppercase mb-4 fw-bold" style="color: #2c3e50;">Merchandising & Sourcing</h2>
+          <p class="lead mb-4" style="color: #34495e; line-height: 1.8;">At cerculean, we provide end-to-end apparel sourcing solutions, combining ethical manufacturing with commercial expertise. As a trusted partner for UK and European brands, we specialise in sustainable production of denim, jerseywear, activewear and woven garments – from fabric sourcing to final delivery.</p>
           
-          <div class="services-overview mb-5">
-            <h3 class="h4 mb-4">We offer:</h3>
-            <div class="row text-start">
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li class="mb-3">✓ Responsible sourcing from certified mills and factories</li>
-                  <li class="mb-3">✓ Full supply chain management including QC and compliance</li>
-                </ul>
+          <div class="services-list mb-4">
+            <h3 class="h5 mb-3 fw-bold" style="color: #2c3e50;">We offer:</h3>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="service-feature p-3 bg-white rounded-3 shadow-sm">
+                  <i class="fas fa-handshake text-primary mb-2"></i>
+                  <h6 class="mb-1 fw-bold">Responsible sourcing</h6>
+                  <small class="text-muted">Ethical suppliers</small>
+                </div>
               </div>
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li class="mb-3">✓ Material expertise in organic, recycled and innovative fabrics</li>
-                  <li class="mb-3">✓ Technical support from design to production</li>
-                </ul>
+              <div class="col-6">
+                <div class="service-feature p-3 bg-white rounded-3 shadow-sm">
+                  <i class="fas fa-network-wired text-primary mb-2"></i>
+                  <h6 class="mb-1 fw-bold">Supply chain management</h6>
+                  <small class="text-muted">End-to-end control</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="service-feature p-3 bg-white rounded-3 shadow-sm">
+                  <i class="fas fa-fabric text-primary mb-2"></i>
+                  <h6 class="mb-1 fw-bold">Material expertise</h6>
+                  <small class="text-muted">Premium fabrics</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="service-feature p-3 bg-white rounded-3 shadow-sm">
+                  <i class="fas fa-tools text-primary mb-2"></i>
+                  <h6 class="mb-1 fw-bold">Technical support</h6>
+                  <small class="text-muted">Expert guidance</small>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="image-block position-relative">
+          <img src="{% static 'images/merchandise/image1.jpg' %}" alt="Merchandising & Sourcing" class="img-fluid rounded-3 shadow-lg" style="transform: perspective(1000px) rotateY(-5deg);">
+          <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: linear-gradient(45deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));"></div>
+          <div class="floating-card position-absolute top-0 end-0 bg-white p-3 rounded-3 shadow-lg" style="transform: translate(20px, -20px);">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-star text-warning me-2"></i>
+              <div>
+                <h6 class="mb-0 fw-bold">20+ Years</h6>
+                <small class="text-muted">Experience</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Right image, Left text -->
+    <div class="row align-items-center mb-5" data-aos="fade-left">
+      <div class="col-lg-6 order-lg-2">
+        <div class="content-block p-4">
+          <div class="section-badge mb-3">
+            <span class="badge bg-success px-3 py-2 rounded-pill">Expertise</span>
+          </div>
+          <p class="mb-4" style="color: #5a6c7d; line-height: 1.7;">With 20+ years' experience, we expertly guide brands through global supply chains, ensuring quality, sustainability and cost efficiency. We source ethical suppliers, implement strict quality control and optimise production while maintaining environmental standards.</p>
+          <p style="color: #5a6c7d; line-height: 1.7;">Our end-to-end solutions deliver commercially smart, sustainable manufacturing without compromising craftsmanship.</p>
           
-          <p class="experience-note">With over 20 years' experience, we help brands navigate global supply chains while maintaining quality, sustainability and cost efficiency.</p>
+          <div class="mt-4">
+            <div class="row text-center">
+              <div class="col-4">
+                <div class="stat-card bg-white p-3 rounded-3 shadow-sm">
+                  <i class="fas fa-globe text-primary mb-2 fs-4"></i>
+                  <h4 class="fw-bold text-primary mb-1">Global</h4>
+                  <small class="text-muted">Supply Chain</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-card bg-white p-3 rounded-3 shadow-sm">
+                  <i class="fas fa-leaf text-success mb-2 fs-4"></i>
+                  <h4 class="fw-bold text-success mb-1">Sustainable</h4>
+                  <small class="text-muted">Production</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-card bg-white p-3 rounded-3 shadow-sm">
+                  <i class="fas fa-award text-warning mb-2 fs-4"></i>
+                  <h4 class="fw-bold text-warning mb-1">Quality</h4>
+                  <small class="text-muted">Assured</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="image-block position-relative">
+          <img src="{% static 'images/merchandise/image2.jpg' %}" alt="Supply Chain Management" class="img-fluid rounded-3 shadow-lg" style="transform: perspective(1000px) rotateY(5deg);">
+          <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: linear-gradient(45deg, rgba(40, 167, 69, 0.2), rgba(23, 162, 184, 0.2));"></div>
+          <div class="floating-card position-absolute bottom-0 start-0 bg-white p-3 rounded-3 shadow-lg" style="transform: translate(-20px, 20px);">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-check-circle text-success me-2"></i>
+              <div>
+                <h6 class="mb-0 fw-bold">Certified</h6>
+                <small class="text-muted">Suppliers</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Left text, Right image -->
+    <div class="row align-items-center" data-aos="fade-right">
+      <div class="col-lg-6">
+        <div class="content-block p-4">
+          <div class="section-badge mb-3">
+            <span class="badge bg-warning px-3 py-2 rounded-pill">Quality & Sustainability</span>
+          </div>
+          <h3 class="h4 mb-3 fw-bold" style="color: #2c3e50;">Quality & Sustainability</h3>
+          <p class="mb-4" style="color: #5a6c7d; line-height: 1.7;">Our commitment to quality extends beyond just meeting standards – we exceed them. Every step of our process is designed to ensure that the final product not only meets but surpasses expectations.</p>
+          <p style="color: #5a6c7d; line-height: 1.7;">We work with certified mills and factories that share our values of ethical manufacturing and environmental responsibility, creating a supply chain you can trust.</p>
+          
+          <div class="mt-4">
+            <div class="quality-features">
+              <div class="d-flex align-items-center mb-3 p-3 bg-white rounded-3 shadow-sm">
+                <i class="fas fa-certificate text-success me-3 fs-4"></i>
+                <div>
+                  <h6 class="mb-1 fw-bold">Certified Standards</h6>
+                  <small class="text-muted">International quality certifications</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-3 p-3 bg-white rounded-3 shadow-sm">
+                <i class="fas fa-recycle text-success me-3 fs-4"></i>
+                <div>
+                  <h6 class="mb-1 fw-bold">Environmental Responsibility</h6>
+                  <small class="text-muted">Sustainable production practices</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm">
+                <i class="fas fa-handshake text-success me-3 fs-4"></i>
+                <div>
+                  <h6 class="mb-1 fw-bold">Ethical Partnerships</h6>
+                  <small class="text-muted">Fair trade and ethical sourcing</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="image-block position-relative">
+          <img src="{% static 'images/merchandise/image3.jpg' %}" alt="Quality & Sustainability" class="img-fluid rounded-3 shadow-lg" style="transform: perspective(1000px) rotateY(-5deg);">
+          <div class="image-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: linear-gradient(45deg, rgba(255, 193, 7, 0.2), rgba(40, 167, 69, 0.2));"></div>
+          <div class="floating-card position-absolute top-50 start-50 translate-middle bg-white p-3 rounded-3 shadow-lg">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-shield-alt text-primary me-2"></i>
+              <div>
+                <h6 class="mb-0 fw-bold">Trusted</h6>
+                <small class="text-muted">Partner</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="image-gallery py-4">
+<!-- Call to Action Section -->
+<section class="cta-section py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
-          <img src="{% static 'images/merchandise/image1.jpg' %}" alt="Image 1" class="img-fluid w-100 h-100 object-fit-cover">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
-          <img src="{% static 'images/merchandise/image2.jpg' %}" alt="Image 2" class="img-fluid w-100 h-100 object-fit-cover">
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="gallery-item shadow-sm rounded overflow-hidden" style="height: 300px;">
-          <img src="{% static 'images/merchandise/image3.jpg' %}" alt="Image 3" class="img-fluid w-100 h-100 object-fit-cover">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <h2 class="text-white fw-bold mb-4">Ready to Start Your Sourcing Journey?</h2>
+        <p class="text-white-75 lead mb-4">Let's discuss how we can help you create sustainable, high-quality apparel with our expert sourcing solutions.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/contact/" class="btn btn-light btn-lg px-4 py-3 rounded-pill shadow-sm fw-bold">Get Started Today</a>
+          <a href="/product-quality-audit/" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">Learn About Quality</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-
+<!-- Enhanced Styles -->
+<style>
+  .section-badge {
+    display: inline-block;
+  }
+  
+  .service-feature {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .service-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+  }
+  
+  .stat-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .quality-features .d-flex {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .quality-features .d-flex:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .floating-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .floating-card:hover {
+    transform: translate(20px, -20px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+  }
+  
+  .image-block img {
+    transition: transform 0.3s;
+  }
+  
+  .image-block:hover img {
+    transform: perspective(1000px) rotateY(0deg) scale(1.05);
+  }
+  
+  .btn {
+    transition: all 0.3s;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175) !important;
+  }
+  
+  .rounded-3 {
+    border-radius: 0.75rem !important;
+  }
+  
+  .hero-header {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255,255,255,0.5);
+  }
+  
+  .breadcrumb-item a:hover {
+    color: white !important;
+    text-decoration: none;
+  }
+</style>
 
 {% endblock %}
